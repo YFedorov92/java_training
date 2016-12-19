@@ -3,9 +3,7 @@ package Zodiac;
 /**
  * Created by yuriyf on 11/8/2016
  */
-public class ZodiacElements {
-
-    public enum Elements{
+public enum ZodiacElements{
         FIRE("Fire"),
         EARTH("Earth"),
         AIR("Air"),
@@ -13,7 +11,7 @@ public class ZodiacElements {
 
         private final String nameOfElement;
 
-        Elements(String nameOfElement) {
+        ZodiacElements(String nameOfElement) {
             this.nameOfElement = nameOfElement;
         }
 
@@ -21,4 +19,4 @@ public class ZodiacElements {
             return nameOfElement;
         }
     }
-}
+
