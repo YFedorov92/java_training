@@ -22,7 +22,8 @@ public class Solution {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM");
         Date dayToCheck = sdf.parse(date);
         for (ZodiacSigns zodiacSigns : ZodiacSigns.values()) {
-            if (sdf.parse(zodiacSigns.getDayStart()).before(dayToCheck) && sdf.parse(zodiacSigns.getDayEnd()).after(dayToCheck) || sdf.parse(zodiacSigns.getDayEnd()).equals(dayToCheck)) {
+            if (sdf.parse(zodiacSigns.getDayStart()).before(dayToCheck) && sdf.parse(zodiacSigns.getDayEnd()).after(dayToCheck)
+                    || sdf.parse(zodiacSigns.getDayEnd()).equals(dayToCheck)) {
                 System.out.print(zodiacSigns.name() + " -->> ");
                 return zodiacSigns;
             }
