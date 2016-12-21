@@ -5,7 +5,7 @@ package ErrorBalance;
  */
 public class TransactionMaker {
     public static void main(String[] args) throws NegativeBalanceException {
-        BankAccount bankAccount = new BankAccount(301.22); // input balance here
+        BankAccount bankAccount = new BankAccount(1.22); // input balance here
             System.out.println(bankAccount.withdraw(300)); // set how much to withdraw here
     }
 }

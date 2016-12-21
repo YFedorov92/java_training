@@ -3,5 +3,10 @@
  */
 public class class20_12_16 {
 
+    public static void main(String args[]){
+
+    }
+
+
 
 }

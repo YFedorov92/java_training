@@ -20,15 +20,16 @@ public class Solution {
 
     public static ZodiacSigns sendZodiac(String date) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM");
+        ZodiacSigns sign = null;
         Date dayToCheck = sdf.parse(date);
-        for (ZodiacSigns zodiacSigns : ZodiacSigns.values()) {
+        for ( ZodiacSigns zodiacSigns : ZodiacSigns.values()) {
             if (sdf.parse(zodiacSigns.getDayStart()).before(dayToCheck) && sdf.parse(zodiacSigns.getDayEnd()).after(dayToCheck)
                     || sdf.parse(zodiacSigns.getDayEnd()).equals(dayToCheck)) {
                 System.out.print(zodiacSigns.name() + " -->> ");
-                return zodiacSigns;
+               sign = zodiacSigns ;
             }
         }
-        return null;
+        return sign;
 
     }
 }
